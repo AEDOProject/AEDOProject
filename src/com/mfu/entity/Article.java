@@ -4,10 +4,12 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Article {
@@ -57,5 +59,20 @@ public class Article {
 	public void setLastupate(Date lastupate) {
 		this.lastupate = lastupate;
 	}
-	
+	@ManyToOne(fetch=FetchType.EAGER)
+	private ArticleType articletype;
+	public ArticleType getArticletype() {
+		return articletype;
+	}
+	public void setArticletype(ArticleType articletype) {
+		this.articletype = articletype;
+	}
+	@ManyToOne(fetch=FetchType.EAGER)
+	private WorkType worktype ;
+	public WorkType getWorktype() {
+		return worktype;
+	}
+	public void setWorktype(WorkType worktype) {
+		this.worktype = worktype;
+	}
 }

@@ -16,6 +16,8 @@
 		<property name="hibernate.current_session_context_class">thread</property>
 		
 		<mapping class="com.mfu.Entity.Article" />
-		
+		<mapping class="com.mfu.Entity.ArticleType" />
+		<mapping class="com.mfu.Entity.WorkType" />
+		<mapping class="com.mfu.Entity.File" />
 	</session-factory>
 </hibernate-configuration> 
