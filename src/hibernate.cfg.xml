@@ -25,5 +25,11 @@
 		<mapping class="com.mfu.entity.User" />
 		<mapping class="com.mfu.entity.TrainingType" />
 		<mapping class="com.mfu.entity.TrainingProject" />
+		<mapping class="com.mfu.entity.Album" />
+		<mapping class="com.mfu.entity.Image" />
+		<mapping class="com.mfu.entity.SAR" />
+		<mapping class="com.mfu.entity.Classroom" />
+		<mapping class="com.mfu.entity.Schedule" />
+		<mapping class="com.mfu.entity.GeneralDetailClassroom"/>
 	</session-factory>
 </hibernate-configuration> 
