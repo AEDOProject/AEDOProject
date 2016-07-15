@@ -56,12 +56,12 @@ public class Schedule {
 		this.endtime = endtime;
 	}
 	@ManyToOne(fetch=FetchType.EAGER)
-	private Classroom clssroom ;
-	public Classroom getClssroom() {
-		return clssroom;
+	private Classroom classroom ;
+	public Classroom getClassroom() {
+		return classroom;
 	}
-	public void setClssroom(Classroom clssroom) {
-		this.clssroom = clssroom;
+	public void setClssroom(Classroom classroom) {
+		this.classroom = classroom;
 	}
 	
 }
