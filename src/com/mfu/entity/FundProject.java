@@ -1,5 +1,7 @@
 package com.mfu.entity;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -19,6 +21,8 @@ public class FundProject {
 	private String semeter ;
 	private double budgets ;
 	private String file ;
+	private Date starttime ;
+	private Date endtime ;
 	public long getId() {
 		return id;
 	}
@@ -67,6 +71,19 @@ public class FundProject {
 	public void setFile(String file) {
 		this.file = file;
 	}
+	public Date getStarttime() {
+		return starttime;
+	}
+	public void setStarttime(Date starttime) {
+		this.starttime = starttime;
+	}
+	public Date getEndtime() {
+		return endtime;
+	}
+	public void setEndtime(Date endtime) {
+		this.endtime = endtime;
+	}
+
 	@ManyToOne(fetch=FetchType.EAGER)
 	private FundType fundtype ;
 	public FundType getFundtype() {

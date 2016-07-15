@@ -42,6 +42,14 @@ public class WorkType {
 	public void setFile(List<File> file) {
 		this.file = file;
 	}
+	@OneToMany(mappedBy="worktype",cascade={CascadeType.ALL})
+	private List<Album> album ;
+	public List<Album> getAlbum() {
+		return album;
+	}
+	public void setAlbum(List<Album> album) {
+		this.album = album;
+	}
 	
 	
 }

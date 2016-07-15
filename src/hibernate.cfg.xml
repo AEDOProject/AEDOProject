@@ -31,5 +31,6 @@
 		<mapping class="com.mfu.entity.Classroom" />
 		<mapping class="com.mfu.entity.Schedule" />
 		<mapping class="com.mfu.entity.GeneralDetailClassroom"/>
+		<mapping class="com.mfu.entity.RegulationProfessor"/>
 	</session-factory>
 </hibernate-configuration> 

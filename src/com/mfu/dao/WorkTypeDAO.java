@@ -126,4 +126,13 @@ public class WorkTypeDAO {
 		session.getTransaction().commit();
 		return objs;
 	}
+	public List<Album> getAlbumByWorkType(long id) {
+		session = sessionFactory.getCurrentSession();
+		session.beginTransaction();
+		List<Album> objs = session
+				.createQuery("SELECT ent FROM Album ent WHERE ent.WorkType.id=:id")
+				.setParameter("id", id).list();
+		session.getTransaction().commit();
+		return objs;
+	}
 }
