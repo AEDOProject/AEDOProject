@@ -10,12 +10,12 @@ import org.hibernate.cfg.AnnotationConfiguration;
 
 import com.mfu.entity.*;
 
-public class WorkTypeDAO {
+public class RoleDAO {
 	SessionFactory sessionFactory;
 
 	Session session;
 
-	public WorkTypeDAO() {
+	public RoleDAO() {
 
 		sessionFactory = new AnnotationConfiguration().configure()
 
@@ -23,7 +23,7 @@ public class WorkTypeDAO {
 
 	}
 
-	public void create(WorkType param) {
+	public void create(Role param) {
 
 		session = sessionFactory.getCurrentSession();
 
@@ -35,7 +35,7 @@ public class WorkTypeDAO {
 
 	}
 
-	public void update(WorkType param) {
+	public void update(Role param) {
 
 		session = sessionFactory.getCurrentSession();
 
@@ -49,7 +49,7 @@ public class WorkTypeDAO {
 
 	public void delete(long id) {
 		
-		WorkType obj = findWorkTypeById(id);
+		Role obj = findRoleById(id);
 
 		session = sessionFactory.getCurrentSession();
 
@@ -65,13 +65,13 @@ public class WorkTypeDAO {
 
 	}
 
-	public WorkType findWorkTypeById(long id) {
+	public Role findRoleById(long id) {
 
 		session = sessionFactory.getCurrentSession();
 
 		session.beginTransaction();
 
-		WorkType obj = (WorkType) session.get(WorkType.class, id);
+		Role obj = (Role) session.get(Role.class, id);
 
 		session.getTransaction().commit();
 
@@ -79,49 +79,24 @@ public class WorkTypeDAO {
 
 	}
 
-	public List<WorkType> getAllWorkType() {
+	public List<Role> getAllRole() {
 
 		session = sessionFactory.getCurrentSession();
 
 		session.beginTransaction();
 
-		List<WorkType> emps = session.createQuery(" SELECT ent FROM WorkType ent ").list();
+		List<Role> emps = session.createQuery(" SELECT ent FROM Role ent ").list();
 
 		session.getTransaction().commit();
 
 		return emps;
 
 	}
-
-	public List<WorkType> findByTitle(String param1) {
-
-		session = sessionFactory.getCurrentSession();
-
-		session.beginTransaction();
-
-		List<WorkType> emps = session.createQuery("SELECT ent FROM WorkType ent WHERE ent.title = :param1")
-
-				.setParameter("param1", param1).list();
-
-		session.getTransaction().commit();
-
-		return emps;
-
-	}
-	public List<Article> getArticleByWorkType(long id) {
+	public List<User> getUserByRole(long id) {
 		session = sessionFactory.getCurrentSession();
 		session.beginTransaction();
-		List<Article> objs = session
-				.createQuery("SELECT ent FROM Article ent WHERE ent.WorkType.id=:id")
-				.setParameter("id", id).list();
-		session.getTransaction().commit();
-		return objs;
-	}
-	public List<File> getFileByWorkType(long id) {
-		session = sessionFactory.getCurrentSession();
-		session.beginTransaction();
-		List<File> objs = session
-				.createQuery("SELECT ent FROM File ent WHERE ent.WorkType.id=:id")
+		List<User> objs = session
+				.createQuery("SELECT ent FROM User ent WHERE ent.Role.id=:id")
 				.setParameter("id", id).list();
 		session.getTransaction().commit();
 		return objs;

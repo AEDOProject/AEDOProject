@@ -10,12 +10,12 @@ import org.hibernate.cfg.AnnotationConfiguration;
 
 import com.mfu.entity.*;
 
-public class WorkTypeDAO {
+public class FundProjectDAO {
 	SessionFactory sessionFactory;
 
 	Session session;
 
-	public WorkTypeDAO() {
+	public FundProjectDAO() {
 
 		sessionFactory = new AnnotationConfiguration().configure()
 
@@ -23,7 +23,7 @@ public class WorkTypeDAO {
 
 	}
 
-	public void create(WorkType param) {
+	public void create(FundProject param) {
 
 		session = sessionFactory.getCurrentSession();
 
@@ -35,7 +35,7 @@ public class WorkTypeDAO {
 
 	}
 
-	public void update(WorkType param) {
+	public void update(FundProject param) {
 
 		session = sessionFactory.getCurrentSession();
 
@@ -49,7 +49,7 @@ public class WorkTypeDAO {
 
 	public void delete(long id) {
 		
-		WorkType obj = findWorkTypeById(id);
+		FundProject obj = findFundProjectById(id);
 
 		session = sessionFactory.getCurrentSession();
 
@@ -65,13 +65,13 @@ public class WorkTypeDAO {
 
 	}
 
-	public WorkType findWorkTypeById(long id) {
+	public FundProject findFundProjectById(long id) {
 
 		session = sessionFactory.getCurrentSession();
 
 		session.beginTransaction();
 
-		WorkType obj = (WorkType) session.get(WorkType.class, id);
+		FundProject obj = (FundProject) session.get(FundProject.class, id);
 
 		session.getTransaction().commit();
 
@@ -79,13 +79,13 @@ public class WorkTypeDAO {
 
 	}
 
-	public List<WorkType> getAllWorkType() {
+	public List<FundProject> getAllFundProject() {
 
 		session = sessionFactory.getCurrentSession();
 
 		session.beginTransaction();
 
-		List<WorkType> emps = session.createQuery(" SELECT ent FROM WorkType ent ").list();
+		List<FundProject> emps = session.createQuery(" SELECT ent FROM FundProject ent ").list();
 
 		session.getTransaction().commit();
 
@@ -93,13 +93,13 @@ public class WorkTypeDAO {
 
 	}
 
-	public List<WorkType> findByTitle(String param1) {
+	public List<FundProject> findByProjectname(String param1) {
 
 		session = sessionFactory.getCurrentSession();
 
 		session.beginTransaction();
 
-		List<WorkType> emps = session.createQuery("SELECT ent FROM WorkType ent WHERE ent.title = :param1")
+		List<FundProject> emps = session.createQuery("SELECT ent FROM FundProject ent WHERE ent.projectname = :param1")
 
 				.setParameter("param1", param1).list();
 
@@ -107,23 +107,5 @@ public class WorkTypeDAO {
 
 		return emps;
 
-	}
-	public List<Article> getArticleByWorkType(long id) {
-		session = sessionFactory.getCurrentSession();
-		session.beginTransaction();
-		List<Article> objs = session
-				.createQuery("SELECT ent FROM Article ent WHERE ent.WorkType.id=:id")
-				.setParameter("id", id).list();
-		session.getTransaction().commit();
-		return objs;
-	}
-	public List<File> getFileByWorkType(long id) {
-		session = sessionFactory.getCurrentSession();
-		session.beginTransaction();
-		List<File> objs = session
-				.createQuery("SELECT ent FROM File ent WHERE ent.WorkType.id=:id")
-				.setParameter("id", id).list();
-		session.getTransaction().commit();
-		return objs;
 	}
 }

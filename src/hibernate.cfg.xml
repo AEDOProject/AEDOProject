@@ -15,9 +15,15 @@
 		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.current_session_context_class">thread</property>
 		
-		<mapping class="com.mfu.Entity.Article" />
-		<mapping class="com.mfu.Entity.ArticleType" />
-		<mapping class="com.mfu.Entity.WorkType" />
-		<mapping class="com.mfu.Entity.File" />
+		<mapping class="com.mfu.entity.Article" />
+		<mapping class="com.mfu.entity.ArticleType" />
+		<mapping class="com.mfu.entity.WorkType" />
+		<mapping class="com.mfu.entity.File" />
+		<mapping class="com.mfu.entity.FundProject" />
+		<mapping class="com.mfu.entity.FundType" />
+		<mapping class="com.mfu.entity.Role" />
+		<mapping class="com.mfu.entity.User" />
+		<mapping class="com.mfu.entity.TrainingType" />
+		<mapping class="com.mfu.entity.TrainingProject" />
 	</session-factory>
 </hibernate-configuration> 

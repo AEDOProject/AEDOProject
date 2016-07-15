@@ -92,4 +92,13 @@ public class ArticleTypeDAO {
 		return emps;
 
 	}
+	public List<Article> getArticleByArticleType(long id) {
+		session = sessionFactory.getCurrentSession();
+		session.beginTransaction();
+		List<Article> objs = session
+				.createQuery("SELECT ent FROM Article ent WHERE ent.ArticleType.id=:id")
+				.setParameter("id", id).list();
+		session.getTransaction().commit();
+		return objs;
+	}
 }
