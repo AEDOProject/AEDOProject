@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<title>Academic Extension and Development Office MFU</title>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
@@ -19,7 +19,30 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-desktop.css" />
 		</noscript>
-        
+    
+
+
+<!-- font awesome -->
+
+
+<!-- bootstrap -->
+
+
+<!-- animate.css -->
+
+<link rel="stylesheet" href="Templates/thebootstrapthemes-photgraphy/assets/animate/set.css" />
+
+<!-- gallery -->
+<link rel="stylesheet" href="Templates/thebootstrapthemes-photgraphy/assets/gallery/blueimp-gallery.min.css">
+
+<!-- favicon -->
+
+
+
+<link rel="stylesheet" href="Templates/thebootstrapthemes-photgraphy/assets/style.css">
+    <!-- Custom CSS -->
+
+      
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><!
         
         [endif]-->
@@ -36,9 +59,9 @@
 						
 					<!-- Logo -->
 						<div id="logo">
-							<img src="images/aedo2.png" alt="" style="width:300px; hieght:auto; margin-top:18px;">             
+							<img src="images/aedo2.png" alt="" style="width:300px; hieght:auto; margin-top:18px;">              
 						</div>
-                        <div class="wrap-position">
+                    <div class="wrap-position">
                             <div class="wrap-icon">
                                 <a href="#">
                                     <img src="images/8.png" style="width:45px; hieght:auto; margin-left:20%;"/><br>
@@ -54,13 +77,13 @@
                             <div class="wrap-icon">
                                 <a href="#">
                                     <img src="images/6.png" style="width:45px; hieght:auto; margin-left:20%;"/><br>
-                                    <center>ห้องเรียน <p style="margin-top:-10px; margin-left:0px; font-size:14px;">Active Learning</p></center> 
+                                    <center>ห้องเรียน <p style="margin-top:-6px; margin-left:0px; font-size:14px;">Active Learning</p></center> 
                                 </a>
                             </div>
                             <div class="wrap-icon">
                                 <a href="#">
                                     <img src="images/5.png" style="width:45px; hieght:auto; margin-left:20%;"/><br>
-                                    <center>ทุนพัฒนา<p style="margin-top:-10px; margin-left:0px;">ภาษา</p></center> 
+                                    <center>ทุนพัฒนา<p style="margin-top:-8px; margin-left:0px;">ภาษา</p></center> 
                                 </a>
                             </div>
                             <div class="wrap-icon">
@@ -105,61 +128,163 @@
 					</nav>
 			</div>
 		</div>
-	<!-- Header -->
-		
 	
-	<!-- Main -->
-		<div id="main">
+	<div id="main">
 
-			<!-- Main Content -->
-			<div class="container">
-				<div class="row">
-					<section class="3u"> 
-						<a href="#" class="image full"><img src="images/pics01.jpg" alt=""></a>
-						<a>ประชาสัมพันธ์การเข้าระบบเพื่อตอบแบบสอบถามออนไลน์ของเครื่องมือการวิจัย เรื่อง “สถานการณ์และระบบ การผลิตบัณฑิตระดับปริญญาตรีของมหาวิทยาลัยแม่ฟ้าหลวง”....</a>
-                        <a href="#">Read More &raquo;</a>
-					</section>
-					<section class="3u">
-						<a href="#" class="image full"><img src="images/pics02.jpg" alt=""></a>
-						<p>Vestibulum imperdiet, magna nec eleifend rutrum. Duis enim nulla, luctus eu, dapibus lacinia quam. </p>
-					</section>
-					<section class="3u">
-						<a href="#" class="image full"><img src="images/pics03.jpg" alt=""></a>
-						<p>Nulla enim eros, porttitor eu, tempus varius non, nibh. Duis enim nulla, luctus eu, dapibus lacinia, venenatis quam.</p>
-					</section>
-					<section class="3u">
-						<a href="#" class="image full"><img src="images/pics04.jpg" alt=""></a>
-						<p>Duis enim nulla, luctus eu, dapibus lacinia, venenatis id, quam. Vestibulum imperdiet, magna nec eleifend rutrum.</p>
-					</section>
-				</div>			
-			</div>
-            <br>
+            <!-- Main Content -->
             <div class="container">
-				<div class="row">
-					<section class="3u"> 
-						<a href="#" class="image full"><img src="images/pics01.jpg" alt=""></a>
-						<a>ประชาสัมพันธ์การเข้าระบบเพื่อตอบแบบสอบถามออนไลน์ของเครื่องมือการวิจัย เรื่อง “สถานการณ์และระบบ การผลิตบัณฑิตระดับปริญญาตรีของมหาวิทยาลัยแม่ฟ้าหลวง”....</a>
-                        <a href="#">Read More &raquo;</a>
-					</section>
-					<section class="3u">
-						<a href="#" class="image full"><img src="images/pics02.jpg" alt=""></a>
-						<p>Vestibulum imperdiet, magna nec eleifend rutrum. Duis enim nulla, luctus eu, dapibus lacinia quam. </p>
-					</section>
-					<section class="3u">
-						<a href="#" class="image full"><img src="images/pics03.jpg" alt=""></a>
-						<p>Nulla enim eros, porttitor eu, tempus varius non, nibh. Duis enim nulla, luctus eu, dapibus lacinia, venenatis quam.</p>
-					</section>
-					<section class="3u">
-						<a href="#" class="image full"><img src="images/pics04.jpg" alt=""></a>
-						<p>Duis enim nulla, luctus eu, dapibus lacinia, venenatis id, quam. Vestibulum imperdiet, magna nec eleifend rutrum.</p>
-					</section>
-				</div>			
-			</div>
-        <!-- /Main Content -->
-		</div>
-        <!-- /Main -->
+                <div class="row">
 
-	<!-- Copyright -->
+
+
+<div id="works"  class=" clearfix grid"> 
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/116664293.jpg" style="width: 1234px;height:265px" alt="img01"/>
+        <figcaption>
+            <h2>Nature</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/116664293.jpg" title="1" data-gallery>View more</a></p>            
+        </figcaption>
+    </figure>
+     <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/mfu1.jpg" style="width: 1234px;height:265px" alt="img01"/>
+        <figcaption>
+            <h2>Events</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/mfu1.jpg" title="1" data-gallery>View more</a></p>            
+        </figcaption>
+    </figure>
+     <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/mfu2.jpg" style="width: 1234px;height:265px" alt="img01"/>
+        <figcaption>
+            <h2>music</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/mfu2.jpg" title="1" data-gallery>View more</a></p>            
+        </figcaption>
+    </figure>
+     <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/mfu3.jpg" style="width: 1234px;height:265px" alt="img01"/>
+        <figcaption>
+            <h2>Vintage</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/mfu3.jpg" title="1" data-gallery>View more</a></p>            
+        </figcaption>
+    </figure>
+     <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/mfu4.jpg" style="width: 1234px;height:265px" alt="img01"/>
+        <figcaption>
+            <h2>Typers</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/mfu4.jpg" title="1" data-gallery>View more</a></p>            
+        </figcaption>
+    </figure>
+     
+     <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/gall_1.jpg"style="width: 1234px;height:265px" alt="img01"/>
+        <figcaption>
+            <h2>hotel</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/B_wnJACUYAArgRC.jpg" title="1" data-gallery>View more</a></p>            
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/B_wnJACUYAArgRC.jpg" style="width: 1234px;height:265px"alt="img01"/>
+        <figcaption>
+            <h2>Chinese</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/B8wWDzcCAAAskyT.jpg" title="1" data-gallery>View more</a></p>            
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="images/B8wWDzcCAAAskyT.jpg"style="width: 1234px;height:265px" alt="img01"/> <figcaption>
+					<h2>Dicrap</h2>
+					<p>
+						Lily likes to play with crayons and pencils<br> <a
+							href="Templates/thebootstrapthemes-photgraphy/images/portfolio/8.jpg"
+							title="1" data-gallery>View more</a>
+					</p>
+					</figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="Templates/thebootstrapthemes-photgraphy/images/portfolio/9.jpg" style="width: 1234px;height:265px"alt="img01"/>
+        <figcaption>
+            <h2>Coffee</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="Templates/thebootstrapthemes-photgraphy/images/portfolio/9.jpg" title="1" data-gallery>View more</a></p>            
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="Templates/thebootstrapthemes-photgraphy/images/portfolio/10.jpg" style="width: 1234px;height:265px"alt="img01"/>
+        <figcaption>
+            <h2>cameras</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="Templates/thebootstrapthemes-photgraphy/images/portfolio/10.jpg" title="1" data-gallery>View more</a></p>            
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="Templates/thebootstrapthemes-photgraphy/images/portfolio/11.jpg" style="width: 1234px;height:265px"alt="img01"/>
+        <figcaption>
+            <h2>design</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="images/portfolio/11.jpg" title="1" data-gallery>View more</a></p>            
+        </figcaption>
+    </figure>
+    <figure class="effect-oscar  wowload fadeInUp">
+        <img src="Templates/thebootstrapthemes-photgraphy/images/portfolio/12.jpg" style="width: 1234px;height:265px"alt="img01"/>
+        <figcaption>
+            <h2>studio</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+            <a href="Templates/thebootstrapthemes-photgraphy/images/portfolio/12.jpg" title="1" data-gallery>View more</a></p>            
+        </figcaption>
+    </figure>
+    
+
+     
+</div>
+<!-- works -->
+
+
+
+
+
+    </div>
+  </div>
+
+
+<!-- team -->
+
+
+ 
+</div>
+<!-- team -->
+
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->    
+</div>
+
+
+<!-- wow script -->
+
+
+
+<!-- boostrap -->
+
+<!-- jquery mobile -->
+
+<!-- gallery -->
+<script src="Templates/thebootstrapthemes-photgraphy/assets/gallery/jquery.blueimp-gallery.min.js"></script>
+
+<!-- custom script -->
+        
+        <!-- Copyright -->
 		<div id="copyright">
 			<div class="container">
 				<section>
