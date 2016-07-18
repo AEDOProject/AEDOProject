@@ -96,7 +96,7 @@ public class ClassroomDAO {
 		session = sessionFactory.getCurrentSession();
 		session.beginTransaction();
 		List<Schedule> objs = session
-				.createQuery("SELECT ent FROM Schedule ent WHERE ent.Classroom.id=:id")
+				.createQuery("SELECT ent FROM Schedule ent WHERE ent.classroom_id=:id")
 				.setParameter("id", id).list();
 		session.getTransaction().commit();
 		return objs;

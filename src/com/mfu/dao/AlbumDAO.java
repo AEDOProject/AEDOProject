@@ -96,7 +96,7 @@ public class AlbumDAO {
 		session = sessionFactory.getCurrentSession();
 		session.beginTransaction();
 		List<Image> objs = session
-				.createQuery("SELECT ent FROM Image ent WHERE ent.Album.id=:id")
+				.createQuery("SELECT ent FROM Image ent WHERE ent.album_id=:id")
 				.setParameter("id", id).list();
 		session.getTransaction().commit();
 		return objs;

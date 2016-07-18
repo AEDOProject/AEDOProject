@@ -96,7 +96,7 @@ public class RoleDAO {
 		session = sessionFactory.getCurrentSession();
 		session.beginTransaction();
 		List<User> objs = session
-				.createQuery("SELECT ent FROM User ent WHERE ent.Role.id=:id")
+				.createQuery("SELECT ent FROM User ent WHERE ent.role_id=:id")
 				.setParameter("id", id).list();
 		session.getTransaction().commit();
 		return objs;

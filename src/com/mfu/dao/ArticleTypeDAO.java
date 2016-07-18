@@ -96,7 +96,7 @@ public class ArticleTypeDAO {
 		session = sessionFactory.getCurrentSession();
 		session.beginTransaction();
 		List<Article> objs = session
-				.createQuery("SELECT ent FROM Article ent WHERE ent.ArticleType.id=:id")
+				.createQuery("SELECT ent FROM Article ent WHERE ent.articletype_id=:id")
 				.setParameter("id", id).list();
 		session.getTransaction().commit();
 		return objs;

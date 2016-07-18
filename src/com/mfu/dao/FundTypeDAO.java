@@ -96,7 +96,7 @@ public class FundTypeDAO {
 		session = sessionFactory.getCurrentSession();
 		session.beginTransaction();
 		List<FundProject> objs = session
-				.createQuery("SELECT ent FROM FundProject ent WHERE ent.FundType.id=:id")
+				.createQuery("SELECT ent FROM FundProject ent WHERE ent.fundtype_id=:id")
 				.setParameter("id", id).list();
 		session.getTransaction().commit();
 		return objs;

@@ -130,7 +130,7 @@ public class WorkTypeDAO {
 		session = sessionFactory.getCurrentSession();
 		session.beginTransaction();
 		List<Album> objs = session
-				.createQuery("SELECT ent FROM Album ent WHERE ent.WorkType.id=:id")
+				.createQuery("SELECT ent FROM Album ent WHERE ent.worktype_id=:id")
 				.setParameter("id", id).list();
 		session.getTransaction().commit();
 		return objs;
