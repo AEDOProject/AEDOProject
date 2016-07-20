@@ -22,6 +22,8 @@ public class Article {
 	private String content;
 	private Date date ;
 	private String photo ;
+	private boolean draft ;
+	private boolean prublish ;
 	private Date lastupate ;
 	public long getId() {
 		return id;
@@ -52,6 +54,18 @@ public class Article {
 	}
 	public void setPhoto(String photo) {
 		this.photo = photo;
+	}
+	public boolean isDraft() {
+		return draft;
+	}
+	public void setDraft(boolean draft) {
+		this.draft = draft;
+	}
+	public boolean isPrublish() {
+		return prublish;
+	}
+	public void setPrublish(boolean prublish) {
+		this.prublish = prublish;
 	}
 	public Date getLastupate() {
 		return lastupate;
