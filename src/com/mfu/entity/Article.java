@@ -23,7 +23,7 @@ public class Article {
 	private Date date ;
 	private String photo ;
 	private boolean draft ;
-	private boolean prublish ;
+	private boolean publish ;
 	private Date lastupate ;
 	public long getId() {
 		return id;
@@ -61,11 +61,11 @@ public class Article {
 	public void setDraft(boolean draft) {
 		this.draft = draft;
 	}
-	public boolean isPrublish() {
-		return prublish;
+	public boolean isPublish() {
+		return publish;
 	}
-	public void setPrublish(boolean prublish) {
-		this.prublish = prublish;
+	public void setPublish(boolean publish) {
+		this.publish = publish;
 	}
 	public Date getLastupate() {
 		return lastupate;
