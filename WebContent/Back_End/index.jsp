@@ -50,7 +50,7 @@
         <!-- Main navbar -->
         <div class="navbar navbar-default header-highlight">
             <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="index.jsp">
                     <img src="assets/images/logo.png" />
                 </a>
                 <ul class="nav navbar-nav visible-xs-block">
@@ -154,7 +154,7 @@
                                 <a href="#"><i class="icon-cog5"></i> Account settings</a>
                             </li>
                             <li>
-                                <a href="login_simple.html"><i class="icon-switch2"></i> Logout</a>
+                                <a href="login_simple.jsp"><i class="icon-switch2"></i> Logout</a>
                             </li>
                         </ul>
                     </li>
@@ -203,7 +203,7 @@
                                         <i class="icon-menu" title="Main Menu"></i>
                                     </li>
                                     <li class="active">
-                                        <a href="index.html"><i class="icon-home4"></i> <span>Dashboard</span></a>
+                                        <a href="index.jsp"><i class="icon-home4"></i> <span>Dashboard</span></a>
                                     </li>
                                                 <li>
                                         <a href="#"><i class="icon-newspaper"></i><span> News/Events</span></a>
@@ -212,10 +212,10 @@
                                                 <a href="#newsevents" data-toggle="modal"><i class=" icon-file-plus"></i>New News/Events</a>
                                             </li>
                                             <li>
-                                                <a href="allnewsandevent.html"><i class="icon-files-empty"></i>All News/Events</a>
+                                                <a href="allnewsandevent.jsp"><i class="icon-files-empty"></i>All News/Events</a>
                                             </li>
                                              <li>
-                                                <a href="newseventsdraft.html"><i class="icon-pencil7"></i>Draft <span class="badge bg-warning-400">9</span></a>
+                                                <a href="newseventsdraft.jsp"><i class="icon-pencil7"></i>Draft <span class="badge bg-warning-400">9</span></a>
                                             </li>
                                             
                                             <li>
@@ -231,7 +231,7 @@
                                                 <a href="#fileModal" data-toggle="modal"><i class=" icon-file-plus"></i>New File</a>
                                             </li>
                                             <li>
-                                                <a href="allfile.html"><i class="icon-files-empty"></i>All File</a>
+                                                <a href="allfile.jsp"><i class="icon-files-empty"></i>All File</a>
                                             </li>
                                             
 
@@ -244,7 +244,7 @@
                                                 <a href="#fileModal" data-toggle="modal"><i class=" icon-file-plus"></i>เพิ่มโครงการใหม่</a>
                                             </li>
                                             <li>
-                                                <a href="allfile.html"><i class="icon-files-empty"></i>ดูโครงการทั้งหมด</a>
+                                                <a href="allfile.jsp"><i class="icon-files-empty"></i>ดูโครงการทั้งหมด</a>
                                             </li>
                                             
                                             
@@ -257,10 +257,10 @@
                                                 <a href="#fileModal" data-toggle="modal"><i class=" icon-file-plus"></i>เพิ่มโครงการใหม่</a>
                                             </li>
                                             <li>
-                                                <a href="allfile.html"><i class="icon-files-empty"></i>ดูโครงการทั้งหมด</a>
+                                                <a href="allfile.jsp"><i class="icon-files-empty"></i>ดูโครงการทั้งหมด</a>
                                             </li>
                                              <li>
-                                                <a href="allfile.html"><i class="icon-files-empty"></i>Knowledge Managment</a>
+                                                <a href="allfile.jsp"><i class="icon-files-empty"></i>Knowledge Managment</a>
                                             </li>
                                             
                                             
@@ -275,10 +275,10 @@
                                         <ul>
                                            
                                             <li>
-                                                <a href="allgallery.html"><i class="icon-images3"></i>AEDO Albums</a>
+                                                <a href="allgallery.jsp"><i class="icon-images3"></i>AEDO Albums</a>
                                             </li>
                                              <li>
-                                                <a href="allgallery.html"><i class="icon-images3"></i>HLLC Albums</a>
+                                                <a href="allgallery.jsp"><i class="icon-images3"></i>HLLC Albums</a>
                                             </li>
                                           
                                             
@@ -289,11 +289,11 @@
                                         <a href="#"><i class="glyphicon glyphicon-user"></i> <span>Manage Staff</span></a>
                                         <ul>
                                             <li>
-                                                <a href="registration.html"><i class="icon-user-plus"></i>Add Staff</a>
+                                                <a href="registration.jsp"><i class="icon-user-plus"></i>Add Staff</a>
                                         
                                             </li>
                                             <li>
-                                                <a href="allstaff.html"><i class="icon-users2"></i>All Staff</a>
+                                                <a href="allstaff.jsp"><i class="icon-users2"></i>All Staff</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -602,7 +602,7 @@
                                                 <div class="col-lg-12 ">
                                                     <div class="input-group">
                                                         <input class="form-control" type="text" placeholder="name">
-                                                        <span class="input-group-btn"><a href="newfile.html">
+                                                        <span class="input-group-btn"><a href="newfile.jsp">
                                                                 <button class="btn btn-primary" type="button">Submit</button>
                                                             </a> </span>
                                                     </div>

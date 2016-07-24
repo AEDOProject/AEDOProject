@@ -82,7 +82,7 @@ $(function() {
             icon: '<i class="icon-file-check"></i>'
         },
         maxFilesNum: 10,
-        allowedFileExtensions: ["jpg", "gif", "png", "txt"]
+        allowedFileExtensions: ["jpg", "gif", "png"]
     });
 
 

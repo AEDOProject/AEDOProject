@@ -300,43 +300,18 @@
                     </div>                     
                 </div>                 
                 <!-- /main sidebar -->                 
-                <!-- Main content -->                 
+                <!-- Main content -->
+                <%
+                	long articleid = Long.parseLong(request.getParameter("articleid"));
+                	Article article = new ArticleDAO().findArticleById(articleid);
+                %>                 
                 <div class="content-wrapper"> 
                     <div class="page-header"> 
                         <div class="page-header-content">
                                                       
                             <div class="page-title"> 
-                                 <h4><button title="เพิ่มข่าวสารและกิจกรรมใหม่" class="btn btn-info btn-float btn-rounded pull-right" type="button" data-toggle="modal" data-target="#fileModal">
-                                        <i class="icon-plus3"></i>
-                                    </button><span class="gb_Rb"></span><span class="text-semibold">  ข่าวสาร และ กิจกรรม</span></h4>
-                                <!--File Modal -->
-                                <div class="modal fade" id="fileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                                <h4 class="modal-title" id="myModalLabel">เพิ่มข่าวสารและกิจกรรมใหม่</h4>
-                                            </div>
-                                            <br> 
-                                            <form action="newfile.jsp" method="post" accept-charset="UTF-8">
-                                            <div class="form-group">
-                                                <div class="col-lg-12 ">
-                                                    <div class="input-group">
-                                                        <input class="form-control" type="text" name="title" placeholder="หัวข้อของกิจกรรมหรือข่าวสาร">
-                                                        <span class="input-group-btn">
-                                                                <button class="btn btn-primary" type="submit">เพิ่ม</button></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </form>
-                                            <div class="modal-footer">
-</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--file Modal -->                                 
+                                 <h4><span class="gb_Rb"></span><span class="text-semibold"> <%=article.getTitle() %></span></h4>
+                                                                
                             </div>                             
                         </div>                         
                     </div>                     
@@ -344,77 +319,8 @@
                     <div class="content"> 
                         <!-- Basic datatable -->                         
                         <div class="panel panel-flat"> 
-                            <div class="panel-heading"> 
-                                <h5 class="panel-title"> <i class="icon-files-empty2"></i> ข่าวสารและกิจกรรมทั้งหมด</h5> 
-                                <div class="heading-elements"> 
-                                    <ul class="icons-list"> 
-                                        <li>
-                                            <a data-action="reload"></a>
-                                        </li>                                         
-                                    </ul>                                     
-                                </div>                                 
-                            </div>                             
-                            <table class="table datatable-basic"> 
-                                <thead> 
-                                    <tr> 
-                                        <th>#</th> 
-                                        <th style="width:15%;">รูปภาพหน้าปก</th> 
-                                        <th style="width:35%;">หัวข้อ</th>
-                                        <th>ประเภทบทความ</th> 
-                                        <th style="width:10%;">วันเวลาที่สร้าง</th> 
-                                        <th>ประเภทงาน</th> 
-                                        <th style="width:10%;">วันเวลาที่เปลี่ยนแปลง</th> 
-                                        <th class="text-center">การกระทำ</th> 
-                                    </tr>                                     
-                                </thead>                                 
-                                <tbody> 
-                                
-                                <%
-                                	ArticleDAO articledao = new ArticleDAO();
-                                	List<Article> listarticle = articledao.getAllArticle();
-                                	int i = 1 ;
-                                	for(Article article : listarticle){
-                                		
-                                	
-                                %>
-                                    <tr> 
-                                        <td><%=i %></td> 
-                                        <td> 
-                                            <a href="<%=article.getPhoto() %>" data-popup="lightbox"> 
-                                                <img src="<%=article.getPhoto() %>" alt="" class="img-rounded img-preview" style="width:100%;height:auto;"> 
-                                            </a>
-                                        </td>                                         
-                                        <td>
-                                            <a href="newsevetdetail.jsp?articleid=<%=article.getId()%>"><%=article.getTitle() %></a>
-                                        </td>
-                                        <td><%=article.getArticletype().getTypename() %></td>                                         
-                                        <td><%=article.getDate() %></td> 
-                                        <td><%=article.getWorktype().getWorktypename() %></td> 
-                                        <td><%=article.getLastupate() %></td> 
-                                        <td class="text-center"> 
-                                            <ul class="icons-list"> 
-                                                <li class="dropdown"> 
-                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-menu9"></i> </a> 
-                                                    <ul class="dropdown-menu dropdown-menu-right"> 
-                                                        <li>
-                                                            <a href="#">ดูเนื้อหาบทความ</a>
-                                                        </li>                                                         
-                                                        <li>
-                                                            <a href="#">แก้ไข</a>
-                                                        </li>                                                         
-                                                        <li>
-                                                            <a href="#" style="color:red;">ลบ</a>
-                                                        </li>                                                        
-                                                    </ul>                                                     
-                                                </li>                                                 
-                                            </ul>                                             
-                                        </td>                                         
-                                    </tr>
-                                    <%
-                                    i++;
-                                	} %>                                     
-                                </tbody>                                 
-                            </table>                             
+                            <!-- Contents -->                             
+                             <%=article.getContent() %>                            
                         </div>                         
                         <!-- /basic datatable -->                         
                         <!-- Footer -->                         

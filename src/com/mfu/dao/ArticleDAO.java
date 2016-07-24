@@ -85,7 +85,7 @@ public class ArticleDAO {
 
 		session.beginTransaction();
 
-		List<Article> emps = session.createQuery(" SELECT ent FROM Article ent ").list();
+		List<Article> emps = session.createQuery(" SELECT ent FROM Article ent ORDER BY ent.date DESC").list();
 
 		session.getTransaction().commit();
 
