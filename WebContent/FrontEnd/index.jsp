@@ -29,7 +29,6 @@
         
         <!-- Bootstrap Core CSS -->
    
-            <script type="text/javascript" src="Templates/slide/js/jquery-1.11.3.min.js"></script>
             <script type="text/javascript" src="Templates/slide/js/jssor.slider.mini.js"></script>
             <!-- use jssor.slider.debug.js instead for debug -->
             <script>
