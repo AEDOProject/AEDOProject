@@ -76,21 +76,6 @@
 <link rel="stylesheet"
 	href="froala_editor_2.3.4/css/plugins/fullscreen.css">
 
-<style>
-body {
-	
-}
-
-div#editor {
-	width: 100%;
-	margin: auto;
-	text-align: left;
-}
-
-.ss {
-	background-color: red;
-}
-</style>
 </head>
 <body>
 	<!-- Main navbar -->
@@ -586,7 +571,8 @@ div#editor {
 				    fontSizeSelection:true,
 				    paragraphFormatSelection:true,
 				    alignSelection:true,
-				    heightMin: 300
+				    heightMin: 300,
+				    fontFamily:{"Arial,Helvetica,sans-serif":"Arial","'Thai Sans Lite', sans-serif":"Thai Sans","Georgia,serif":"Georgia","Impact,Charcoal,sans-serif":"Impact","Tahoma,Geneva,sans-serif":"Tahoma","Times New Roman,Times,serif":"Times New Roman","Verdana,Geneva,sans-serif":"Verdana"}
 				})
 			});
 			$('#frame').click(function() {
@@ -604,7 +590,8 @@ div#editor {
 				    fontFamilySelection: true,
 				    fontSizeSelection:true,
 				    paragraphFormatSelection:true,
-				    heightMin: 300
+				    heightMin: 300,
+				    fontFamily:{"Arial,Helvetica,sans-serif":"Arial","'Thai Sans Lite', sans-serif":"Thai Sans","Georgia,serif":"Georgia","Impact,Charcoal,sans-serif":"Impact","Tahoma,Geneva,sans-serif":"Tahoma","Times New Roman,Times,serif":"Times New Roman","Verdana,Geneva,sans-serif":"Verdana"}
 				});
 				$('#inline').prop( "disabled", false );
 				$('#frame').prop( "disabled", true );
@@ -623,7 +610,8 @@ div#editor {
 				    tabSpaces: 4,
 				    toolbarVisibleWithoutSelection: true,
 				    zIndex:2501,
-				    heightMin: 300
+				    heightMin: 300,
+				    fontFamily:{"Arial,Helvetica,sans-serif":"Arial","'Thai Sans Lite', sans-serif":"Thai Sans","Georgia,serif":"Georgia","Impact,Charcoal,sans-serif":"Impact","Tahoma,Geneva,sans-serif":"Tahoma","Times New Roman,Times,serif":"Times New Roman","Verdana,Geneva,sans-serif":"Verdana"}
 				});
 				$('#inline').prop( "disabled", true );
 				$('#frame').prop( "disabled", false );
