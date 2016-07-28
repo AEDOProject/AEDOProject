@@ -96,9 +96,24 @@ public class ArticleTypeDAO {
 		session = sessionFactory.getCurrentSession();
 		session.beginTransaction();
 		List<Article> objs = session
-				.createQuery("SELECT ent FROM Article ent WHERE ent.articletype_id=:id")
+				.createQuery("SELECT ent FROM Article ent WHERE articletype_id=:id")
 				.setParameter("id", id).list();
 		session.getTransaction().commit();
 		return objs;
+	}
+	public List<ArticleType> findByTitle(String param1) {
+
+		session = sessionFactory.getCurrentSession();
+
+		session.beginTransaction();
+
+		List<ArticleType> emps = session.createQuery("SELECT ent FROM ArticleType ent WHERE ent.typename = :param1")
+
+				.setParameter("param1", param1).list();
+
+		session.getTransaction().commit();
+
+		return emps;
+
 	}
 }

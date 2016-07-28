@@ -98,7 +98,6 @@ public class ArticleDAO {
 		session = sessionFactory.getCurrentSession();
 
 		session.beginTransaction();
-
 		List<Article> emps = session.createQuery("SELECT ent FROM Article ent WHERE ent.title = :param1")
 
 				.setParameter("param1", param1).list();

@@ -14,19 +14,19 @@
 	href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900"
 	rel="stylesheet" type="text/css">
 <link
-	href="${pageContext.request.contextPath}/Back_End/assets/css/icons/icomoon/styles.css"
+	href="assets/css/icons/icomoon/styles.css"
 	rel="stylesheet" type="text/css">
 <link
-	href="${pageContext.request.contextPath}/Back_End/assets/css/bootstrap.css"
+	href="assets/css/bootstrap.css"
 	rel="stylesheet" type="text/css">
 <link
-	href="${pageContext.request.contextPath}/Back_End/assets/css/core.css"
+	href="assets/css/core.css"
 	rel="stylesheet" type="text/css">
 <link
-	href="${pageContext.request.contextPath}/Back_End/assets/css/components.css"
+	href="assets/css/components.css"
 	rel="stylesheet" type="text/css">
 <link
-	href="${pageContext.request.contextPath}/Back_End/assets/css/colors.css"
+	href="assets/css/colors.css"
 	rel="stylesheet" type="text/css">
 <!-- /global stylesheets -->
 <link href="froala_editor_2.3.4/css/froala_editor.min.css"
@@ -63,37 +63,37 @@
 	href="froala_editor_2.3.4/css/plugins/fullscreen.css">
 <!-- Core JS files -->
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/Back_End/assets/js/plugins/loaders/pace.min.js"></script>
+	src="assets/js/plugins/loaders/pace.min.js"></script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/Back_End/assets/js/core/libraries/jquery.min.js"></script>
+	src="assets/js/core/libraries/jquery.min.js"></script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/Back_End/assets/js/core/libraries/bootstrap.min.js"></script>
+	src="assets/js/core/libraries/bootstrap.min.js"></script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/Back_End/assets/js/plugins/loaders/blockui.min.js"></script>
+	src="assets/js/plugins/loaders/blockui.min.js"></script>
 <!-- /core JS files -->
 <!-- Theme JS files -->
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/Back_End/assets/js/plugins/uploaders/fileinput.min.js"></script>
+	src="assets/js/plugins/uploaders/fileinput.min.js"></script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/Back_End/assets/js/plugins/tables/datatables/datatables.min.js"></script>
+	src="assets/js/plugins/tables/datatables/datatables.min.js"></script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/Back_End/assets/js/plugins/forms/selects/select2.min.js"></script>
+	src="assets/js/plugins/forms/selects/select2.min.js"></script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/Back_End/assets/js/core/app.js"></script>
+	src="assets/js/core/app.js"></script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/Back_End/assets/js/pages/datatables_basic.js"></script>
+	src="assets/js/pages/datatables_basic.js"></script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/Back_End/assets/js/pages/uploader_bootstrap.js"></script>
+	src="assets/js/pages/uploader_bootstrap.js"></script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/Back_End/assets/js/plugins/media/fancybox.min.js"></script>
+	src="assets/js/plugins/media/fancybox.min.js"></script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/Back_End/assets/js/plugins/forms/styling/uniform.min.js"></script>
+	src="assets/js/plugins/forms/styling/uniform.min.js"></script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/Back_End/assets/js/plugins/forms/selects/select2.min.js"></script>
+	src="assets/js/plugins/forms/selects/select2.min.js"></script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/Back_End/assets/js/plugins/tables/datatables/datatables.min.js"></script>
+	src="assets/js/plugins/tables/datatables/datatables.min.js"></script>
 <script type="text/javascript"
-	src="${pageContext.request.contextPath}/Back_End/assets/js/pages/gallery_library.js"></script>
+	src="assets/js/pages/gallery_library.js"></script>
 <!-- /theme JS files -->
 </head>
 <body>
@@ -101,7 +101,7 @@
 	<div class="navbar navbar-default header-highlight">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="index.jsp"> <img
-				src="${pageContext.request.contextPath}/Back_End/assets/images/logo.png" />
+				src="assets/images/logo.png" />
 			</a>
 			<ul class="nav navbar-nav visible-xs-block">
 				<li><a data-toggle="collapse" data-target="#navbar-mobile"><i
@@ -115,7 +115,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown dropdown-user"><a class="dropdown-toggle"
 					data-toggle="dropdown"> <img
-						src="${pageContext.request.contextPath}/Back_End/assets/images/placeholder.jpg"
+						src="assets/images/placeholder.jpg"
 						alt=""> <span>Victoria</span> <i class="caret"></i>
 				</a>
 					<ul class="dropdown-menu dropdown-menu-right">
@@ -145,7 +145,7 @@
 						<div class="category-content">
 							<div class="media">
 								<a href="#" class="media-left"> <img
-									src="${pageContext.request.contextPath}/Back_End/assets/images/placeholder.jpg"
+									src="assets/images/placeholder.jpg"
 									class="img-circle img-sm" alt="">
 								</a>
 								<div class="media-body">

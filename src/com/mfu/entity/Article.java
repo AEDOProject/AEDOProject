@@ -24,7 +24,7 @@ public class Article {
 	private String photo ;
 	private boolean draft ;
 	private boolean publish ;
-	private Date lastupate ;
+	private Date lastupdate ;
 	public long getId() {
 		return id;
 	}
@@ -67,11 +67,11 @@ public class Article {
 	public void setPublish(boolean publish) {
 		this.publish = publish;
 	}
-	public Date getLastupate() {
-		return lastupate;
+	public Date getLastupdate() {
+		return lastupdate;
 	}
-	public void setLastupate(Date lastupate) {
-		this.lastupate = lastupate;
+	public void setLastupdate(Date lastupate) {
+		this.lastupdate = lastupate;
 	}
 	@ManyToOne(fetch=FetchType.EAGER)
 	private ArticleType articletype;

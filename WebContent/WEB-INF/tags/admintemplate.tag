@@ -36,7 +36,39 @@
         <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
         <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
         <!-- /core JS files -->
-        
+        <!-- /global stylesheets -->
+<link href="froala_editor_2.3.4/css/froala_editor.min.css"
+	rel="stylesheet" type="text/css" />
+<link href="froala_editor_2.3.4/css/froala_style.min.css"
+	rel="stylesheet" type="text/css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<!-- Include Code Mirror style -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
+
+<!-- Include Editor Plugins style. -->
+<link rel="stylesheet"
+	href="froala_editor_2.3.4/css/plugins/char_counter.css">
+<link rel="stylesheet"
+	href="froala_editor_2.3.4/css/plugins/code_view.css">
+<link rel="stylesheet" href="froala_editor_2.3.4/css/plugins/colors.css">
+<link rel="stylesheet"
+	href="froala_editor_2.3.4/css/plugins/emoticons.css">
+<link rel="stylesheet" href="froala_editor_2.3.4/css/plugins/file.css">
+<link rel="stylesheet"
+	href="froala_editor_2.3.4/css/plugins/fullscreen.css">
+<link rel="stylesheet" href="froala_editor_2.3.4/css/plugins/image.css">
+<link rel="stylesheet"
+	href="froala_editor_2.3.4/css/plugins/image_manager.css">
+<link rel="stylesheet"
+	href="froala_editor_2.3.4/css/plugins/line_breaker.css">
+<link rel="stylesheet"
+	href="froala_editor_2.3.4/css/plugins/quick_insert.css">
+<link rel="stylesheet" href="froala_editor_2.3.4/css/plugins/table.css">
+<link rel="stylesheet" href="froala_editor_2.3.4/css/plugins/video.css">
+<link rel="stylesheet"
+	href="froala_editor_2.3.4/css/plugins/fullscreen.css">
         <!-- Theme JS files -->
        
         <script type="text/javascript" src="assets/js/plugins/uploaders/fileinput.min.js"></script>         
@@ -151,10 +183,10 @@
                                         <a href="#"><i class="icon-magazine"></i><span> บทความ</span></a>
                                         <ul>
                                             <li class="${allnews }">
-                                                <a href="allnews.jsp"><i class="icon-newspaper"></i>ดูข่าวสารทั้งหมด</a>
+                                                <a href="AllNews?type=ข่าวสาร"><i class="icon-newspaper"></i>ดูข่าวสารทั้งหมด</a>
                                             </li>
                                              <li class="${allevent }">
-                                                <a href="allevent.jsp"><i class="icon-accessibility"></i>ดูกิจกรรมทั้งหมด</a>
+                                                <a href="AllEvents?type=กิจกรรม"><i class="icon-accessibility"></i>ดูกิจกรรมทั้งหมด</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -210,7 +242,7 @@
                                           <li class="${allfile }">
                                                 <a href="allfile.jsp"><i class="icon-files-empty"></i>ดูโครงการทั้งหมด</a>
                                             </li>
-                                           <li class="${allfile }">
+                                           <li class="${km }">
                                                 <a href="allfile.jsp"><i class="icon-files-empty"></i>Knowledge Managment</a>
                                             </li>
                                         </ul>
@@ -226,11 +258,11 @@
                                     <li>
                                         <a href="#"><i class="icon-images2"></i> <span>อัลบั้ม </span></a>
                                         <ul>
-                                            <li class="${allfile }">
+                                            <li class="${allgallery }">
                                                 <a href="allgallery.jsp"><i class="icon-images3"></i>AEDO อัลบั้ม</a>
                                             </li>
                                             
-                                            <li class="${allfile }">
+                                            <li class="${allhllcgallery }">
                                                 <a href="allgallery.jsp"><i class="icon-images3"></i>HLLC อัลบั้ม</a>
                                             </li>
                                             

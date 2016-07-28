@@ -390,7 +390,7 @@
                                         <td><%=article.getArticletype().getTypename() %></td>                                         
                                         <td><%=article.getDate() %></td> 
                                         <td><%=article.getWorktype().getWorktypename() %></td> 
-                                        <td><%=article.getLastupate() %></td> 
+                                        <td><%=article.getLastupdate() %></td> 
                                         <td class="text-center"> 
                                             <ul class="icons-list"> 
                                                 <li class="dropdown"> 
