@@ -96,7 +96,7 @@ public class TrainingTypeDAO {
 		session = sessionFactory.getCurrentSession();
 		session.beginTransaction();
 		List<TrainingProject> objs = session
-				.createQuery("SELECT ent FROM TrainingProject ent WHERE ent.trainingtype_id=:id")
+				.createQuery("SELECT ent FROM TrainingProject ent WHERE trainingtype_id=:id")
 				.setParameter("id", id).list();
 		session.getTransaction().commit();
 		return objs;

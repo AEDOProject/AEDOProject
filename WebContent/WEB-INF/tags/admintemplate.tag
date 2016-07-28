@@ -84,6 +84,14 @@
         <script type="text/javascript" src="assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
         <script type="text/javascript" src="assets/js/plugins/ui/moment/moment.min.js"></script>
         <script type="text/javascript" src="assets/js/plugins/pickers/daterangepicker.js"></script>
+        
+	<script type="text/javascript" src="assets/js/plugins/pickers/anytime.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.time.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/pickers/pickadate/legacy.js"></script>
+	<script type="text/javascript" src="assets/js/pages/picker_date.js"></script>
+        
         <script type="text/javascript" src="assets/js/core/app.js"></script>
         <script type="text/javascript" src="assets/js/pages/dashboard.js"></script>
          <script type="text/javascript" src="assets/js/pages/gallery_library.js"></script>
@@ -221,7 +229,7 @@
                                         <ul>
                                             
                                              <li class="${alltraining }">
-                                                <a href="alltraining.jsp"><i class="icon-files-empty"></i>ดูโครงการทั้งหมด</a>
+                                                <a href="ViewTraining"><i class="icon-files-empty"></i>ดูโครงการทั้งหมด</a>
                                             </li>
                                         </ul>
                                     </li>
