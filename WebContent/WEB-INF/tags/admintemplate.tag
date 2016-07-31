@@ -14,6 +14,7 @@
 <%@ attribute name="allsar" required="false" rtexprvalue="true"%>
 <%@ attribute name="allevent" required="false" rtexprvalue="true"%>
 <%@ attribute name="content" fragment="true" %>
+<%@ attribute name="header" fragment="true" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -82,9 +83,11 @@
         <script type="text/javascript" src="assets/js/plugins/forms/styling/switchery.min.js"></script>
         <script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
         <script type="text/javascript" src="assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/notifications/bootbox.min.js"></script>
+        <script type="text/javascript" src="assets/js/plugins/notifications/sweet_alert.min.js"></script>
         <script type="text/javascript" src="assets/js/plugins/ui/moment/moment.min.js"></script>
         <script type="text/javascript" src="assets/js/plugins/pickers/daterangepicker.js"></script>
-        
+        <script type="text/javascript" src="assets/js/pages/components_modals.js"></script>
 	<script type="text/javascript" src="assets/js/plugins/pickers/anytime.min.js"></script>
 	<script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.js"></script>
 	<script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.date.js"></script>
@@ -298,9 +301,8 @@
                 <!-- Main content -->
                 <div class="content-wrapper">
                     <!-- Content area -->
+                    <jsp:invoke fragment="header"></jsp:invoke>
                     <div class="content">
-                        <br>
-                        <br>
                         <div class="row">
                         
                         <jsp:invoke fragment="content"></jsp:invoke>

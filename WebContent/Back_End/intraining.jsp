@@ -12,7 +12,7 @@
                                     <ul class="icons-list">
                                         <li></li>
                                     </ul>
-                                    <a href="newTraining?typeid=${requestScope.trainingtype.id }"><button title="เพิ่มข่าวสาร" class="btn btn-info btn-icon btn-rounded" type="button">
+                                    <a href="newTraining?typeid=${requestScope.trainingtype.id }"><button title="เพิ่มการอบรม" class="btn btn-info btn-icon btn-rounded" type="button">
                                         <i class="icon-plus3"></i>
                                     </button></a>
                                 </div>                               
@@ -37,11 +37,49 @@
                                         <td>${loop.index+1 }</td> 
                                         <td> ${training.trainingname }</td>  
                                         <td> ${training.detail }</td>  
-                                        <td> ${training.amount }</td>  
-                                        <td> <fmt:formatDate pattern="dd/MM/yyyy" value="${training.signupstartdate }" /> - <fmt:formatDate pattern="dd/MM/yyyy" value="${training.signupenddate }" /></td>  
-                                        <td> <fmt:formatDate pattern="dd/MM/yyyy" value="${training.startdate }" /> - <fmt:formatDate pattern="dd/MM/yyyy" value="${training.enddate}" /> ${training.place}</td>  
-                                        <td><a href="${training.signuplink }" target="_blank" data-toggle="tooltip" data-placement="top" title="${training.signuplink }">คลิกที่นี่</a></td>
-                                        <td><a href="${training.listlink }" target="_blank" data-toggle="tooltip" data-placement="top" title="${training.listlink }">คลิกที่นี่</a></td> 
+                                        <td> ${training.amount }</td>
+                                        <fmt:formatDate value="${training.signupstartdate}" pattern="dd" var="startsignupdate" />
+                                        <fmt:formatDate value="${training.signupstartdate}" pattern="MMMM" var="startsignupmonth" />
+                                        <fmt:formatDate value="${training.signupstartdate}" pattern="yyyy" var="startsignupyear" />
+                                        
+                                        <fmt:formatDate value="${training.signupenddate}" pattern="dd" var="endsignupdate" />
+                                        <fmt:formatDate value="${training.signupenddate}" pattern="MMMM" var="endsignupmonth" />
+                                        <fmt:formatDate value="${training.signupenddate}" pattern="yyyy" var="endsignupyear" />
+                                        <c:choose>
+                                        	<c:when test="${startsignupmonth eq endsignupmonth && startsignupyear eq endsignupyear }">
+                                        		<td>${startsignupdate } - ${endsignupdate } ${startsignupmonth } ${startsignupyear}</td>
+                                        	</c:when>
+                                        	<c:when test="${startsignupmonth ne endsignupmonth && startsignupyear eq endsignupyear }">
+                                        		<td>${startsignupdate } ${startsignupmonth } - ${endsignupdate } ${endsignupmonth } ${startsignupyear}</td>
+                                        	</c:when>
+                                        	<c:otherwise>
+                                        		<td> <fmt:formatDate pattern="dd MMMM yyyy" value="${training.signupstartdate }" /> - <fmt:formatDate pattern="dd MM yyyy" value="${training.signupenddate }" /></td>
+                                        	</c:otherwise>
+                                        </c:choose>
+                                        <fmt:formatDate value="${training.startdate}" pattern="dd" var="startdate" />
+                                        <fmt:formatDate value="${training.startdate}" pattern="MMMM" var="startmonth" />
+                                        <fmt:formatDate value="${training.startdate}" pattern="yyyy" var="startyear" />
+                                        
+                                        <fmt:formatDate value="${training.enddate}" pattern="dd" var="enddate" />
+                                        <fmt:formatDate value="${training.enddate}" pattern="MMMM" var="endmonth" />
+                                        <fmt:formatDate value="${training.enddate}" pattern="yyyy" var="endyear" />  
+                                          <c:choose>
+                                          	<c:when test="${startdate eq enddate && startmonth eq endmonth && startyear eq endyear }">
+                                          		<td>${startdate } ${startmonth } ${startyear } ณ  ${training.place }</td>
+                                          	</c:when>
+                                          	<c:when test="${startdate ne enddate && startmonth eq endmonth && startyear eq endyear }">
+                                          		<td>${startdate } - ${enddate } ${startmonth } ${startyear } ณ  ${training.place }</td>
+                                          	</c:when>
+                                          	<c:when test="${startdate ne enddate && startmonth ne endmonth && startyear eq endyear }">
+                                          		<td>${startdate } ${startmonth } - ${enddate } ${endmonth } ${startdate } ณ  ${training.place }</td>
+                                          	</c:when>
+                                          	<c:otherwise>
+                                          		<td> <fmt:formatDate pattern="dd MMMM yyyy" value="${training.startdate }" /> - <fmt:formatDate pattern="dd MM yyyy" value="${training.enddate}" /> ณ  ${training.place}</td>
+                                          	</c:otherwise>
+                                          </c:choose>
+                                          
+                                        <td><a href="${training.signuplink }" target="_blank"  title="${training.signuplink }">คลิกที่นี่</a></td>
+                                        <td><a href="${training.listlink }" target="_blank"  title="${training.listlink }">คลิกที่นี่</a></td> 
                                         <td class="text-center"> 
                                             <ul class="icons-list"> 
                                                 <li class="dropdown"> 
@@ -62,10 +100,5 @@
                                 </tbody>                                 
                             </table>                             
                         </div>
-                        <script type="text/javascript">
-                        $( "a" ).after(function() {
-                        	  $('[data-toggle="tooltip"]').tooltip()
-                        	})
-                        </script>
 	</jsp:attribute>
 </aedo:admintemplate>

@@ -40,7 +40,6 @@ public class AllNews extends HttpServlet {
 		request.setAttribute("listnews", list);
 		
 		request.setAttribute("typeid", typeid.get(0).getId());
-		request.setAttribute("url", "http://www.journaldev.com");
 		RequestDispatcher rd = getServletContext().getRequestDispatcher("/Back_End/allnews.jsp");
 		rd.forward(request, response);
 	}

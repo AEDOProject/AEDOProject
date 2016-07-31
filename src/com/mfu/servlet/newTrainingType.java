@@ -25,7 +25,7 @@ public class newTrainingType extends HttpServlet {
 		boolean pass = true ;
 		List<TrainingType> listtraining = traindao.getAllTrainingType();
 		for(TrainingType type : listtraining){
-			if(type.getTrainingtypename().equals(typenameen)){
+			if(type.getTrainingtypename().equals(typenameen) && type.getYear().equals(year)){
 				pass = false ;
 				break;
 			}
