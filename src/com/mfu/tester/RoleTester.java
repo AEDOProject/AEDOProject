@@ -5,14 +5,16 @@ public class RoleTester {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Role role = new Role();
-		role.setRolename("HLLC Staff");
+		TrainingType role = new TrainingType();
+		role.setTrainingtypename("Staff Training 2018");
+		role.setYear("2563");
+		role.setShow(true);
 		
-		RoleDAO roledao = new RoleDAO();
+		TrainingTypeDAO roledao = new TrainingTypeDAO();
 		roledao.create(role);
 		
-		for(Role list : roledao.getAllRole()){
-			System.out.println("id: "+list.getId()+" name: "+list.getRolename());
+		for(TrainingType list : roledao.getAllTrainingType()){
+			System.out.println("id: "+list.getId()+" name: "+list.getTrainingtypename());
 		}
 	}
 

@@ -1,0 +1,130 @@
+{
+	"files": {
+		"index.html": {
+			"frameworks": [
+				"pg.insight.events",
+				"pg.code-validator",
+				"pg.project.items",
+				"pg.asset.manager",
+				"bs3.3.6",
+				"pg.html",
+				"pg.components"
+			],
+			"last_page_width": 1024
+		},
+		"login_simple.html": {
+			"frameworks": [
+				"pg.insight.events",
+				"pg.code-validator",
+				"pg.project.items",
+				"pg.asset.manager",
+				"bs3.3.6",
+				"pg.html",
+				"pg.components"
+			],
+			"last_page_width": 1024
+		},
+		"login_registration.html": {
+			"frameworks": [
+				"pg.insight.events",
+				"pg.code-validator",
+				"pg.project.items",
+				"pg.asset.manager",
+				"bs3.3.6",
+				"pg.html",
+				"pg.components"
+			],
+			"last_page_width": 1024
+		},
+		"gallery_description.html": {
+			"frameworks": [
+				"pg.insight.events",
+				"pg.code-validator",
+				"pg.project.items",
+				"pg.asset.manager",
+				"bs3.3.6",
+				"pg.html",
+				"pg.components"
+			],
+			"last_page_width": 1024
+		},
+		"ingallery.html": {
+			"frameworks": [
+				"pg.insight.events",
+				"pg.code-validator",
+				"pg.project.items",
+				"pg.asset.manager",
+				"bs3.3.6",
+				"pg.html",
+				"pg.components"
+			],
+			"last_page_width": 1024
+		},
+		"allgallery.html": {
+			"frameworks": [
+				"pg.insight.events",
+				"pg.code-validator",
+				"pg.project.items",
+				"pg.asset.manager",
+				"bs3.3.6",
+				"pg.html",
+				"pg.components"
+			],
+			"last_page_width": 1600
+		},
+		"newfile.html": {
+			"frameworks": [
+				"pg.insight.events",
+				"pg.code-validator",
+				"pg.project.items",
+				"pg.fontawesome",
+				"pg.asset.manager",
+				"bs3.3.6",
+				"pg.html",
+				"pg.components"
+			],
+			"last_page_width": 1280
+		},
+		"allfile.html": {
+			"frameworks": [
+				"pg.insight.events",
+				"pg.code-validator",
+				"pg.project.items",
+				"pg.asset.manager",
+				"bs3.3.6",
+				"pg.html",
+				"pg.components"
+			],
+			"last_page_width": 1024
+		},
+		"alltraining.html": {
+			"frameworks": [
+				"pg.insight.events",
+				"pg.code-validator",
+				"pg.project.items",
+				"pg.asset.manager",
+				"bs3.3.6",
+				"pg.html",
+				"pg.components"
+			],
+			"last_page_width": 1600
+		}
+	},
+	"breakpoints": [
+		"480px",
+		"767px",
+		"769px",
+		"1025px",
+		"1200px"
+	],
+	"frameworks": [
+		"pg.insight.events",
+		"pg.code-validator",
+		"pg.project.items",
+		"pg.asset.manager",
+		"bs3.3.6",
+		"pg.html",
+		"pg.components"
+	],
+	"custom_width": 947
+}

@@ -10,6 +10,7 @@ import java.util.Date;
 import com.mfu.dao.*;
 import com.mfu.entity.*;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -24,7 +25,7 @@ import org.apache.commons.io.IOUtils;
 
 
 
-@WebServlet("/addArticle")
+@WebServlet("/Back_End/addArticle")
 @MultipartConfig(maxFileSize = 25177215)
 // upload file's size up to 16MB
 public class addnewArticle extends HttpServlet {
@@ -43,7 +44,7 @@ public class addnewArticle extends HttpServlet {
 			InputStream fileContent = filePart.getInputStream();
 
 			// Create folder if no existing folder
-			File folderPart = new File("E:\\Mars Workspace\\TestDB\\WebContent\\upload");
+			File folderPart = new File(request.getServletContext().getRealPath("")+File.separator+"Back_End\\uploadarticle");
 			if (!folderPart.exists()) {
 				folderPart.mkdir();
 			}
@@ -51,12 +52,12 @@ public class addnewArticle extends HttpServlet {
 			try {
 
 				// Directory
-				afterpart = "E:\\Mars Workspace\\TestDB\\WebContent\\upload\\" + fileName;
+				afterpart = request.getServletContext().getRealPath("")+File.separator+"Back_End\\uploadarticle\\" + fileName;
 				// Copy file to the part that we set before.
 				FileOutputStream output = new FileOutputStream(afterpart);
 				IOUtils.copy(fileContent, output);
 
-				afterpart = "upload/" + fileName;
+				afterpart = "uploadarticle/" + fileName;
 
 			} catch (Exception e) {
 				afterpart = null;
@@ -67,23 +68,47 @@ public class addnewArticle extends HttpServlet {
 		String titleen = new String(title.getBytes("ISO-8859-1"), "UTF-8");
 		String content = request.getParameter("editor");
 		String contenten = new String(content.getBytes("ISO-8859-1"), "UTF-8");
+		long articletypeid = Long.parseLong(request.getParameter("typeid"));
+		long worktypeid = Long.parseLong(request.getParameter("worktype"));
 		Article article = new Article();
 		article.setTitle(titleen);
 		article.setContent(contenten);
 		Date date = new Date();
 		article.setDate(date);
-		article.setLastupate(date);
+		article.setPublish(true);
+		article.setDraft(false);
+		article.setLastupdate(date);
 		article.setPhoto(afterpart);
+		article.setArticletype(new ArticleTypeDAO().findArticleTypeById(articletypeid));
+		article.setWorktype(new WorkTypeDAO().findWorkTypeById(worktypeid));
 		
 		ArticleDAO dao = new ArticleDAO();
 		
 		dao.create(article);
 		
 		// Return page
-		getServletContext().getRequestDispatcher("/AddnewArticle.jsp").forward(
-				request, response);
+		doGet(request, response,articletypeid);
 		
 
+	}
+	protected void doGet(HttpServletRequest request, HttpServletResponse response,long typeid) throws ServletException, IOException {
+		//getServletContext().getRequestDispatcher("/Back_End/allnewsandevent.jsp").forward(
+		//		request, response);
+		ArticleTypeDAO dao = new ArticleTypeDAO();
+		System.out.println(dao.findArticleTypeById(typeid).getTypename());
+		String url = "" ;
+		request.setCharacterEncoding("UTF-8");
+		if(typeid == 2){
+			url = "/Back_End/AllNews?type="+dao.findArticleTypeById(typeid).getTypename();
+			System.out.println("url "+url);
+			RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
+			rd.forward(request, response);
+		}else{
+			url = "/Back_End/AllEvents?type="+dao.findArticleTypeById(typeid).getTypename(); 
+			System.out.println("url "+url);
+			RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
+			rd.forward(request, response);
+		}
 	}
 
 	private static String getFileName(Part part) {

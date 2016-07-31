@@ -70,8 +70,9 @@ public class Article {
 	public Date getLastupdate() {
 		return lastupdate;
 	}
-	public void setLastupdate(Date lastupdate) {
-		this.lastupdate = lastupdate;
+
+	public void setLastupdate(Date lastupate) {
+		this.lastupdate = lastupate;
 	}
 	@ManyToOne(fetch=FetchType.EAGER)
 	private ArticleType articletype;
