@@ -43,7 +43,7 @@
 						
 					<!-- Logo -->
                     <div id="logo">
-                        <a href="index.html">
+                        <a href="index.jsp">
 							<img src="images/aedo2.png" alt="" style="width:300px; hieght:auto; margin-top:18px;"> 
                         </a>
 						</div>
@@ -67,19 +67,19 @@
                                 </a>
                             </div>
                             <div class="wrap-icon">
-                                <a href="developFund.html">
+                                <a href="developFund.jsp">
                                     <img src="images/5.png" class="icon"/><br>
                                     <center>ทุนพัฒนา<p style="margin-top:-10px; margin-left:0px;">ภาษา</p></center> 
                                 </a>
                             </div>
                             <div class="wrap-icon">
-                                <a href="researchFund.html">
+                                <a href="researchFund.jsp">
                                     <img src="images/4.png" class="icon"/><br>
                                     <center>ทุนวิจัย</center> 
                                 </a>
                             </div>
                             <div class="wrap-icon">
-                                <a  href="textBookFund.html">
+                                <a  href="textBookFund.jsp">
                                     <img src="images/3.png" class="icon"/><br>
                                     <center>ทุนตำรา</center> 
                                 </a>
@@ -91,7 +91,7 @@
                                 </a>
                             </div>
                             <div class="wrap-icon">
-                                <a  href="trainings.html">
+                                <a  href="trainings.jsp">
                                     <img src="images/1.png" class="icon"/><br>
                                     <center>อบรม</center> 
                                 </a>
@@ -104,12 +104,12 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="AboutUs.html">About Us</a></li>
-							<li><a href="OurServices.html">Our Services</a></li>
-							<li><a href="SAR.html">SAR</a></li>
-							<li><a href="WebBlogs.html">Web Blogs</a></li>
-                            <li><a href="PhotoAlbems.html">Photo Albums</a></li>
+							<li class="active"><a href="index.jsp">Home</a></li>
+							<li><a href="AboutUs.jsp">About Us</a></li>
+							<li><a href="OurServices.jsp">Our Services</a></li>
+							<li><a href="SAR.jsp">SAR</a></li>
+							<li><a href="WebBlogs.jsp">Web Blogs</a></li>
+                            <li><a href="PhotoAlbems.jsp">Photo Albums</a></li>
 						</ul>
 					</nav>
 			</div>
@@ -134,7 +134,7 @@
 								if(type.isShow()==true){
 							
 							%>
-                                <li style="font-family:'Thai Sans Lite'; font-size:21px;">&#9679;<a href="trainings.html"><%=type.getTrainingtypename()%></a></li>						
+                                <li style="font-family:'Thai Sans Lite'; font-size:21px;">&#9679;<a href="trainings.jsp"><%=type.getTrainingtypename()%></a></li>						
 							<%}} %>
 							</ul>
 						</section>

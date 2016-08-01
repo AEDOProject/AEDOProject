@@ -39,7 +39,7 @@
 						
 					<!-- Logo -->
                     <div id="logo">
-                        <a href="index.html">
+                        <a href="index.jsp">
 							<img src="images/aedo2.png" alt="" style="width:300px; hieght:auto; margin-top:18px;"> 
                         </a>
 						</div>
@@ -63,19 +63,19 @@
                                 </a>
                             </div>
                             <div class="wrap-icon">
-                                <a href="developFund.html">
+                                <a href="developFund.jsp">
                                     <img src="images/5.png" class="icon"/><br>
                                     <center>ทุนพัฒนา<p style="margin-top:-10px; margin-left:0px;">ภาษา</p></center> 
                                 </a>
                             </div>
                             <div class="wrap-icon">
-                                <a href="researchFund.html">
+                                <a href="researchFund.jsp">
                                     <img src="images/4.png" class="icon"/><br>
                                     <center>ทุนวิจัย</center> 
                                 </a>
                             </div>
                             <div class="wrap-icon">
-                                <a  href="textBookFund.html">
+                                <a  href="textBookFund.jsp">
                                     <img src="images/3.png" class="icon"/><br>
                                     <center>ทุนตำรา</center> 
                                 </a>
@@ -87,7 +87,7 @@
                                 </a>
                             </div>
                             <div class="wrap-icon">
-                                <a  href="trainings.html">
+                                <a  href="trainings.jsp">
                                     <img src="images/1.png" class="icon"/><br>
                                     <center>อบรม</center> 
                                 </a>
@@ -124,9 +124,9 @@
 								<h2>การอบรม</h2>
 							</header>
 							<ul class="default alt">
-                                <li style="font-family:'Thai Sans Lite'; font-size:21px;">&#9679;<a href="trainings.html">Staff Trainings 2016</a></li>
-                                <li style="font-family:'Thai Sans Lite'; font-size:21px;">&#9679;<a href="allFacultyStaff.html">สำหรับอาจารย์ทุกท่าน</a></li>
-								<li style="font-family:'Thai Sans Lite'; font-size:21px;">&#9679;<a href="newFacultyStaff.html">สำหรับอาจารย์ใหม่</a></li>								
+                                <li style="font-family:'Thai Sans Lite'; font-size:21px;">&#9679;<a href="trainings.jsp">Staff Trainings 2016</a></li>
+                                <li style="font-family:'Thai Sans Lite'; font-size:21px;">&#9679;<a href="allFacultyStaff.jsp">สำหรับอาจารย์ทุกท่าน</a></li>
+								<li style="font-family:'Thai Sans Lite'; font-size:21px;">&#9679;<a href="newFacultyStaff.jsp">สำหรับอาจารย์ใหม่</a></li>								
 							</ul>
 						</section>
 						
@@ -192,4 +192,4 @@
 
 
 	</body>
-</html>>
+</html>
