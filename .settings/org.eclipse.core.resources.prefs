@@ -1,13 +1,14 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=refs/remotes/origin/master
 eclipse.preferences.version=1
-<<<<<<< HEAD
-encoding//WebContent/FrontEnd/AboutUs.jsp=UTF-8
-=======
 encoding//WebContent/Back_End/allnewsandevent.jsp=UTF-8
 encoding//WebContent/Back_End/intraining.jsp=UTF-8
 encoding//WebContent/Back_End/registration.jsp=UTF-8
+encoding//WebContent/FrontEnd/AboutUs.jsp=UTF-8
+encoding//WebContent/FrontEnd/SAR.jsp=UTF-8
 encoding//WebContent/FrontEnd/allFacultyStaff.jsp=UTF-8
 encoding//WebContent/FrontEnd/index.jsp=UTF-8
 encoding//WebContent/FrontEnd/newFacultyStaff.jsp=UTF-8
 encoding//WebContent/FrontEnd/ourServices.jsp=UTF-8
 encoding//WebContent/FrontEnd/webBlogs.jsp=UTF-8
->>>>>>> refs/remotes/origin/master

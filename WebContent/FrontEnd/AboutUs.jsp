@@ -97,12 +97,12 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li class="active"><a href="AboutUs.html">About Us</a></li>
-							<li><a href="OurServices.html">Our Services</a></li>
-							<li><a href="SAR.html">SAR</a></li>
-							<li><a href="WebBlogs.html">Web Blogs</a></li>
-                            <li><a href="PhotoAlbems.html">Photo Albums</a></li>
+							<li><a href="index.jsp">Home</a></li>
+							<li class="active"><a href="AboutUs.jsp">About Us</a></li>
+							<li><a href="OurServices.jsp">Our Services</a></li>
+							<li><a href="SAR.jsp">SAR</a></li>
+							<li><a href="WebBlogs.jsp">Web Blogs</a></li>
+                            <li><a href="PhotoAlbems.jsp">Photo Albums</a></li>
 						</ul>
 					</nav>
 			</div>

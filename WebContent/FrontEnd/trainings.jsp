@@ -3,6 +3,7 @@
     pageEncoding="UTF-8"%>
  <%@ page import="com.mfu.entity.*" %>
  <%@ page import="com.mfu.dao.*" %>
+ <%@ page import="java.text.*" %>
 <!DOCTYPE HTML>
 <!--
 	Colorized by TEMPLATED
@@ -130,11 +131,11 @@
 							<%TrainingTypeDAO dao = new TrainingTypeDAO();
 							List<TrainingType> list = dao.getAllTrainingType();
 							for(TrainingType type : list){
-								
+								if(type.isShow()==true){
 							
 							%>
                                 <li style="font-family:'Thai Sans Lite'; font-size:21px;">&#9679;<a href="trainings.html"><%=type.getTrainingtypename()%></a></li>						
-							<%} %>
+							<%}} %>
 							</ul>
 						</section>
 						
@@ -206,8 +207,28 @@
                                   <tr>
                                     <td><%=project.getTrainingname()%></td>
                                     <td><%=project.getDetail()%></td>
-                                    <td></td>
+                                    <td><%=project.getAmount() %></td>                                    
+                                    <%                                    
+                                    String startDate = new SimpleDateFormat("dd").format(project.getStartdate());
+                                    String startMonth = new SimpleDateFormat("MMMMM").format(project.getStartdate());
+                                    String startYear = new SimpleDateFormat("yyyy").format(project.getStartdate());
+                                    String endDate = new SimpleDateFormat("dd").format(project.getEnddate());
+                                    String endMounth = new SimpleDateFormat("MMMMM").format(project.getEnddate());
+                                    String endYear = new SimpleDateFormat("yyyy").format(project.getEnddate());
+                                    %>
                                     <td>วันเสาร์ที่ 14 พฤศจิกายน 2558 ณ ห้องประชุมแม่สาย อาคารสำนักงานอธิการบดี AD1</td>
+                                    <%                                    
+                                    String startSignupDate = new SimpleDateFormat("dd").format(project.getSignupstartdate());
+                                    String startSignupMonth = new SimpleDateFormat("MMMMM").format(project.getSignupstartdate());
+                                    String startSignupYear = new SimpleDateFormat("yyyy").format(project.getSignupstartdate());
+                                    String endSignupDate = new SimpleDateFormat("dd").format(project.getSignupenddate());
+                                    String endSignupMonth = new SimpleDateFormat("MMMMM").format(project.getSignupenddate());
+                                    String endSignupYear = new SimpleDateFormat("yyyy").format(project.getSignupenddate());
+                                    
+                                    if(startSignupMonth==endSignupMonth && startSignupYear==endSignupYear){
+                                    	
+                                    }
+                                    %>
                                     <td>วันอังคารที่ 27 ตุลาคม - วันอังคารที่ 10 พฤศจิกายน 2558</td>
                                     <td>ปิดรับการลงทะเบียน</td>
                                     <td>ตรวจสอบรายชือการลงทะเบียนเข้าร่วม</td>  
