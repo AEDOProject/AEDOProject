@@ -1,11 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
-<!--
-	Colorized by TEMPLATED
-    templated.co @templatedco
-    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
 	<head>
 		<title>Academic Extension and Development Office MFU</title>
@@ -102,6 +97,7 @@
 							<li><a href="OurServices.jsp">Our Services</a></li>
 							<li class="active"><a href="SAR.jsp">SAR</a></li>
 							<li><a href="WebBlogs.jsp">Web Blogs</a></li>
+							<li><a href="Download.jsp">Download</a></li>
                             <li><a href="PhotoAlbems.jsp">Photo Albums</a></li>
 						</ul>
 					</nav>

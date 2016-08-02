@@ -1,11 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
-<!--
-	Colorized by TEMPLATED
-    templated.co @templatedco
-    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
 	<head>
 		<title>Academic Extension and Development Office MFU</title>
@@ -102,6 +97,7 @@
 							<li class="active"><a href="OurServices.jsp">Our Services</a></li>
 							<li><a href="SAR.jsp">SAR</a></li>
 							<li><a href="WebBlogs.jsp">Web Blogs</a></li>
+							<li><a href="Download.jsp">Download</a></li>
                             <li><a href="PhotoAlbems.jsp">Photo Albums</a></li>
 						</ul>
 					</nav>
@@ -120,28 +116,14 @@
 					<div id="sidebar1" class="3u">
 						<section>
 							<header>
-								<h2>Aenean elementum</h2>
+								<h2>Our Services</h2>
 							</header>
-							<ul class="default alt">
-								<li class="fa fa-angle-right"><a href="#">Vestibulum luctus venenatis dui</a></li>
-								<li class="fa fa-angle-right"><a href="#">Integer rutrum nisl in mi</a></li>
-								<li class="fa fa-angle-right"><a href="#">Etiam malesuada rutrum enim</a></li>
-								<li class="fa fa-angle-right"><a href="#">Aenean elementum facilisis ligula</a></li>
-								<li class="fa fa-angle-right"><a href="#">Ut tincidunt elit vitae augue</a></li>
+							<ul class="default alt">								
+								<li style="font-family:'Thai Sans Lite'; font-size:21px;">&#9679;<a href="LearningTools.jsp">Learning Tools</a></li>
+                                <li style="font-family:'Thai Sans Lite'; font-size:21px;">&#9679;<a href="Surveys.jsp">Surveys</a></li>								
 							</ul>
 						</section>
-						<section>
-							<header>
-								<h2>Etiam malesuada</h2>
-							</header>
-							<ul class="default alt">
-								<li class="fa fa-angle-right"><a href="#">Vestibulum luctus venenatis dui</a></li>
-								<li class="fa fa-angle-right"><a href="#">Integer rutrum nisl in mi</a></li>
-								<li class="fa fa-angle-right"><a href="#">Etiam malesuada rutrum enim</a></li>
-								<li class="fa fa-angle-right"><a href="#">Aenean elementum facilisis ligula</a></li>
-								<li class="fa fa-angle-right"><a href="#">Ut tincidunt elit vitae augue</a></li>
-							</ul>
-						</section>
+						
 					</div>
 				
 					<div class="9u skel-cell-important">

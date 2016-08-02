@@ -1,15 +1,13 @@
+<%@page import="org.hibernate.ejb.criteria.expression.function.CurrentDateFunction"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
  <%@ page import="com.mfu.entity.*" %>
  <%@ page import="com.mfu.dao.*" %>
  <%@ page import="java.text.*" %>
+  <%@ page import="java.util.*" %>
 <!DOCTYPE HTML>
-<!--
-	Colorized by TEMPLATED
-    templated.co @templatedco
-    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
+
 <html>
 	<head>
 		<title>Academic Extension and Development Office MFU</title>
@@ -104,11 +102,12 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li class="active"><a href="index.jsp">Home</a></li>
+							<li><a href="index.jsp">Home</a></li>
 							<li><a href="AboutUs.jsp">About Us</a></li>
 							<li><a href="OurServices.jsp">Our Services</a></li>
 							<li><a href="SAR.jsp">SAR</a></li>
 							<li><a href="WebBlogs.jsp">Web Blogs</a></li>
+							<li><a href="Download.jsp">Download</a></li>
                             <li><a href="PhotoAlbems.jsp">Photo Albums</a></li>
 						</ul>
 					</nav>
@@ -144,7 +143,7 @@
 				
 					<div class="9u skel-cell-important">
 						<section>
-							<p style="font-size:36px; font-weight:bold;">Staff Trainings 2016</p>
+							<p style="font-size:36px; font-weight:bold;"><%=list.get(0).getTrainingtypename() %></p>
                             
                             <div class="container">
                                 
@@ -197,13 +196,14 @@
                                     <th style="width:20%;"><center>รายชื่อผู้เข้าร่วมอบรม/กิจกรรม</center></th>
                                 </tr>                                     
                                 </thead>
+                                <tbody>
                                 <% TrainingProjectDAO traingProject = new TrainingProjectDAO();
                                 List<TrainingProject> listTrainingProject = traingProject.getAllTrainingProject();
                                 
                                 for(TrainingProject project : listTrainingProject){
                                 %>	
                                 
-                                <tbody>
+                                
                                   <tr>
                                     <td><%=project.getTrainingname()%></td>
                                     <td><%=project.getDetail()%></td>
@@ -213,10 +213,21 @@
                                     String startMonth = new SimpleDateFormat("MMMMM").format(project.getStartdate());
                                     String startYear = new SimpleDateFormat("yyyy").format(project.getStartdate());
                                     String endDate = new SimpleDateFormat("dd").format(project.getEnddate());
-                                    String endMounth = new SimpleDateFormat("MMMMM").format(project.getEnddate());
+                                    String endMonth = new SimpleDateFormat("MMMMM").format(project.getEnddate());
                                     String endYear = new SimpleDateFormat("yyyy").format(project.getEnddate());
+                                    
+                                    if(startDate.equals(endDate)&&startMonth.equals(endMonth)&& startYear.equals(endYear)){%>
+                                    	<td><%=startDate%> <%=startMonth %> <%=startYear %> ณ  <%=project.getPlace() %></td>
+                                    <%
+                                    }else if(startMonth.equals(endMonth)&& startYear.equals(endYear)){ %>
+                                    	<td><%=startDate%> - <%=endDate%> <%=startMonth%> <%=startYear %> ณ   <%=project.getPlace()%></td>
+                                    <%
+                                    }else if(!startMonth.equals(endMonth)&& startYear.equals(endYear)){%>
+                                    	<td><%=startDate%> <%=startMonth%> - <%=endDate%> <%=endMonth %> <%=startYear %> ณ   <%=project.getPlace()%></td>
+                                    <%
+                                    }                                    
                                     %>
-                                    <td>วันเสาร์ที่ 14 พฤศจิกายน 2558 ณ ห้องประชุมแม่สาย อาคารสำนักงานอธิการบดี AD1</td>
+                                    
                                     <%                                    
                                     String startSignupDate = new SimpleDateFormat("dd").format(project.getSignupstartdate());
                                     String startSignupMonth = new SimpleDateFormat("MMMMM").format(project.getSignupstartdate());
@@ -225,18 +236,38 @@
                                     String endSignupMonth = new SimpleDateFormat("MMMMM").format(project.getSignupenddate());
                                     String endSignupYear = new SimpleDateFormat("yyyy").format(project.getSignupenddate());
                                     
-                                    if(startSignupMonth==endSignupMonth && startSignupYear==endSignupYear){
+                                    if(startSignupDate.equals(endSignupDate)&& startSignupMonth.equals(endSignupMonth)&&startSignupYear.equals(endSignupYear)){%>
+                                    	<td><%=startSignupDate%> <%=endSignupMonth%> <%=startSignupYear %></td>
+                                    <%
+                                    }else if(startSignupMonth.equals(endSignupMonth) && startSignupYear.equals(endSignupYear)) {%>
+                                    	<td><%=startSignupDate%> - <%=endSignupDate%> <%=startSignupMonth %> <%=startSignupYear %></td>
                                     	
+                                    <%}else if(!startSignupMonth.equals(endSignupMonth)&& startSignupYear.equals(endSignupYear)){%>
+                                    	<td><%=startSignupDate%> <%=startSignupMonth%> - <%=endSignupDate %> <%=endSignupMonth %> <%=startSignupYear %></td>
+                                    <%
+                                    }else if(!startSignupYear.equals(endSignupYear)){%>
+                                    	<td><%=startSignupDate%> <%=startSignupMonth%> <%=startSignupYear %> - <%=endSignupDate %> <%=endSignupMonth %> <%=endSignupYear %></td>
+                                    <%	
                                     }
-                                    %>
-                                    <td>วันอังคารที่ 27 ตุลาคม - วันอังคารที่ 10 พฤศจิกายน 2558</td>
+                                    %>                                    
+                                    <%if(new Date().getTime() > project.getSignupenddate().getTime()){ %> 
                                     <td>ปิดรับการลงทะเบียน</td>
-                                    <td>ตรวจสอบรายชือการลงทะเบียนเข้าร่วม</td>  
+                                    <%}else if (new Date().getTime() < project.getSignupstartdate().getTime()) {%>
+                                    <td>ปิดรับการลงทะเบียน</td>
+                                    <%}else {%>
+                                    <td>เปิดรับการลงทะเบียน</td>
+                                   	<%} %>
+                                   	<%if (new Date().getTime() > project.getSignupenddate().getTime()){ %>
+                                    <td><a href="#">ตรวจสอบรายชือการลงทะเบียนเข้าร่วม</a></td>
+                                    <%}else{ %>
+                                    <td></td>
+                                    <%} %>
                                   </tr>                                 
-                                </tbody>
+                                
                                <%
                                 }
                                 %> 
+                                </tbody>
                               </table>
                             </center> 
                         </section>
